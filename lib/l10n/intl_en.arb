@@ -1,1 +1,6 @@
-{}
+{
+    "home": "home",
+    "recents": "recents",
+    "favorites": "favorites",
+    "search": "search"
+}

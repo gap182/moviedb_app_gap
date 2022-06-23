@@ -45,7 +45,7 @@ class _SplahsPageState extends ConsumerState<SplashPage>
   }
 
   void _goHome() {
-    context.go('/home');
+    context.go('/main');
   }
 
   @override

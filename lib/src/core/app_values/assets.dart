@@ -3,4 +3,6 @@ abstract class Assets {
 
   //MARK: General
   static const String mainLogo = '$_images/main_logo.png';
+  static const String errorGeneral = '$_images/error_general.png';
+  static const String noImage = '$_images/no_image.png';
 }
