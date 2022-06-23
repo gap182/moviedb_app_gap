@@ -5,18 +5,22 @@ class HomeState {
   HomeState({
     required this.homeStatus,
     required this.popularMovies,
+    this.indexPage = 1,
   });
 
   final HomeStatus homeStatus;
+  final int indexPage;
   final List<MovieEntity> popularMovies;
 
   HomeState copyWith({
     HomeStatus? homeStatus,
     List<MovieEntity>? popularMovies,
+    int? indexPage,
   }) {
     return HomeState(
       homeStatus: homeStatus ?? this.homeStatus,
       popularMovies: popularMovies ?? this.popularMovies,
+      indexPage: indexPage ?? this.indexPage,
     );
   }
 }

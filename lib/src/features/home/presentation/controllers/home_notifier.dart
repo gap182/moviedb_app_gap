@@ -9,9 +9,9 @@ class HomeNotifier extends StateNotifier<HomeState> {
 
   final PopularRepository repository;
 
-  void getPopulars(int page) async {
+  void getPopulars() async {
     _loading();
-    final response = await repository.getPopulars(page);
+    final response = await repository.getPopulars(1);
 
     if (response.response != null && response.error == null) {
       state = state.copyWith(popularMovies: response.response);
@@ -21,9 +21,10 @@ class HomeNotifier extends StateNotifier<HomeState> {
     }
   }
 
-  void updatePopulars(int page) async {
+  void updatePopulars() async {
     _loading();
-    final response = await repository.getPopulars(page);
+    state = state.copyWith(indexPage: state.indexPage + 1);
+    final response = await repository.getPopulars(state.indexPage);
 
     if (response.response != null && response.error == null) {
       final tempList = state.popularMovies;
