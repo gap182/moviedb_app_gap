@@ -5,7 +5,6 @@ class GlobalNotifier extends StateNotifier<GlobalState> {
   GlobalNotifier() : super(GlobalState(selectedIndex: 0));
 
   void onChangeIndex(int index) {
-    print('changing');
     state = state.copyWith(selectedIndex: index);
   }
 }

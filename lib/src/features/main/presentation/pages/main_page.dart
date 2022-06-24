@@ -42,6 +42,7 @@ class MainPage extends ConsumerWidget {
     return Scaffold(
       body: pageSelected,
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           title,
         ),

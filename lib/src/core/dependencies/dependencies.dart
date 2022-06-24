@@ -4,6 +4,8 @@ import 'package:imagineapp_test_gap/src/config/config_notifier.dart';
 import 'package:imagineapp_test_gap/src/config/config_state.dart';
 import 'package:imagineapp_test_gap/src/core/presentation/controllers/global_notifier.dart';
 import 'package:imagineapp_test_gap/src/core/presentation/states/global_state.dart';
+import 'package:imagineapp_test_gap/src/features/favorites/presentation/controllers/favorites_notifier.dart';
+import 'package:imagineapp_test_gap/src/features/favorites/presentation/states/favorites_state.dart';
 import 'package:imagineapp_test_gap/src/features/home/data/repositories/popular_repository_impl.dart';
 import 'package:imagineapp_test_gap/src/features/home/data/services/popular_service.dart';
 import 'package:imagineapp_test_gap/src/features/home/domain/repositories/popular_repository.dart';

@@ -48,7 +48,18 @@ class _HomePageState extends ConsumerState<HomePage> {
                   },
                   icon: const Icon(Icons.arrow_downward));
             } else {
-              return MovieCard(movie: movies[index]);
+              final favoritesList =
+                  ref.watch(favoritesProvider).favoritesMovies;
+              bool isFavorite = false;
+              for (var element in favoritesList) {
+                if (element.id == movies[index].id) {
+                  isFavorite = true;
+                }
+              }
+              return MovieCard(
+                movie: movies[index],
+                isFavorite: isFavorite,
+              );
             }
           },
         ),
